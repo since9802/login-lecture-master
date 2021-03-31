@@ -22,5 +22,11 @@ function login() {
   }) //서버에서 응답한 데이터를 다시받으려면 fetch 끝에 then이라는 매서드를 사용해서 데이터를 가져올수있음
     .then((res) => res.json())
     //promise값이 나와서 한번 더 then을 사용한다
-    .then((res) => console.log(res));
+    .then((res) => {
+      if (res.success) {
+        location.href = "/";
+      } else {
+        alert(res.msg);
+      }
+    });
 }
