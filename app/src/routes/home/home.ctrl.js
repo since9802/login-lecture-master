@@ -1,11 +1,11 @@
 "use strict";
 
 const User = require("../../models/User");
-
+// function hello(req, res){}와 const hello =() =>{} 는 똑같은것임
 const output = {
   home: (req, res) => {
     res.render("home/index");
-  }, // function hello(req, res){}와 const hello =() =>{} 는 똑같은것임
+  },
 
   login: (req, res) => {
     res.render("home/login");
