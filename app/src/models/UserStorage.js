@@ -1,5 +1,7 @@
 "use strict";
 
+const User = require("./User");
+
 class UserStorage {
   static #users = {
     //class안에 변수선언할때는 const 필요없음. 그래서 users라고한것
@@ -18,6 +20,16 @@ class UserStorage {
       return newUsers;
     }, {});
     return newUsers;
+  }
+  static getUserInfo(id) {
+    const users = this.#users;
+    const idx = users.id.indexOf(id);
+    const usersKeys = Object.keys(users);
+    const userInfo = usersKeys.reduce((newUser, info) => {
+      newUser[info] = users[info][idx];
+      return newUser;
+    }, {});
+    return userInfo;
   }
 }
 
