@@ -10,6 +10,9 @@ const output = {
   login: (req, res) => {
     res.render("home/login");
   },
+  register: (req, res) => {
+    res.render("home/register");
+  },
 };
 //login.js에서 body로 데이터를 전달하니깐 해당body를 보기위해서 req.body라고작성함
 const process = {
