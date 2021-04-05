@@ -2,7 +2,7 @@
 
 const id = document.querySelector("#id"), //login.ejs 에 id로 부여된 id의값을 불러오기
   psword = document.querySelector("#psword"),
-  loginBtn = document.querySelector("button");
+  loginBtn = document.querySelector("#button");
 
 loginBtn.addEventListener("click", login); //로그인버튼이 클릭될때 login함수실행
 
