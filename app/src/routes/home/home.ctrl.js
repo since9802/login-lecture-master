@@ -16,9 +16,9 @@ const output = {
 };
 //login.js에서 body로 데이터를 전달하니깐 해당body를 보기위해서 req.body라고작성함
 const process = {
-  login: (req, res) => {
+  login: async (req, res) => {
     const user = new User(req.body);
-    const response = user.login();
+    const response = await user.login();
     return res.json(response);
   },
   register: (req, res) => {
