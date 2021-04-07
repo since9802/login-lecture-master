@@ -11,4 +11,5 @@ router.get("/login", ctrl.output.login);
 router.get("/register", ctrl.output.register);
 //로그인데이터를 받아서 로그인기능을 처리함,home.ctrl에 process함수만듬
 router.post("/login", ctrl.process.login);
+router.post("/register", ctrl.process.register);
 module.exports = router; //exports는 router를 사용하기위해 외부로 보내주는 역할
