@@ -9,7 +9,7 @@ registerBtn.addEventListener("click", register); //로그인버튼이 클릭될�
 
 function register() {
   if (!id.value) return alert("아이디를 입력해주십시오");
-  if (psword !== confirmPsword.value)
+  if (psword.value !== confirmPsword.value)
     return alert("비밀번호가 일치하지않습니다.");
 
   const req = {
