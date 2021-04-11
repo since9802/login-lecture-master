@@ -2,7 +2,8 @@
 // 모듈
 const express = require("express"); //express불러오기
 const app = express(); //app이라는 변수에 express 실행
-
+const dotenv = require("dotenv");
+dotenv.config();
 // 라우팅
 const home = require("./src/routes/home");
 // 앱세팅
