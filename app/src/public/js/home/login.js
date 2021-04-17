@@ -7,6 +7,9 @@ const id = document.querySelector("#id"), //login.ejs 에 id로 부여된 id의�
 loginBtn.addEventListener("click", login); //로그인버튼이 클릭될때 login함수실행
 
 function login() {
+  if (!id.value) return alert("아이디를 입력해주십시오.");
+  if (!psword.value) return alert("비밀번호를 입력해주십시오.");
+
   const req = {
     //값을 불러오기위해 value라는 값을 사용함
     id: id.value,
@@ -28,6 +31,7 @@ function login() {
       if (res.success) {
         location.href = "/";
       } else {
+        if (res.err) return alert(res.err);
         alert(res.msg);
       }
     });
