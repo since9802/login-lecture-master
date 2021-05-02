@@ -10,6 +10,7 @@ const accessLogStream = require("./src/config/log");
 // 라우팅
 const home = require("./src/routes/home");
 // 앱세팅
+app.engine("html", require("ejs").renderFile);
 app.set("views", "./src/views"); //
 app.set("view engine", "ejs"); //view engine을 ejs사용
 app.use(express.static(`${__dirname}/src/public`)); //login.ejs의 경로중 js에 접근할 수 있도록 해줌
