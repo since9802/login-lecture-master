@@ -2,18 +2,301 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Cushion</title>
-    <meta name="description" content="Website for smart cushion" />
+    <meta
+      name="description"
+      content="Portfolio for world-renowned software engineer Hyogi"
+    />
     <meta name="author" content="Hyogi" />
-    <link rel="icon" type="image/png" href="../../../imgs/favicon.png" />
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
     <script
-      src="https://kit.fontawesome.com/d8c2b8b7e5.js"
+      src="https://kit.fontawesome.com/f7da50d553.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/home/style.css" />
+    <sript src="main.js defer"></sript>
   </head>
   <body>
-    "아아"
+    <!--Navbar-->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <i class="fab fa-diaspora"></i>
+        <a href="#">스마트 방석</a>
+      </div>
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item active">Home</li>
+          <li class="navbar__menu__item">About</li>
+          <li class="navbar__menu__item">Skills</li>
+          <li class="navbar__menu__item">Members</li>
+          <li class="navbar__menu__item">Testimonial</li>
+          <li class="navbar__menu__item">Review</li>
+        </ul>
+      </div>
+
+      <!-- Toggle button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    <!-- Home -->
+    <section id="home">
+      <img
+        src="imgs/KakaoTalk_20210313_224525193.jpg"
+        alt="Hyogi's Profile photo"
+        class="home__avatar"
+      />
+
+      <h1 class="home__title">CCIT 홈페이지에 오신 것을<br />환영합니다:)</h1>
+      <h3 class="home__description">made by 이규혁</h3>
+      <button class="home__contact">Contact Me</button>
+    </section>
+    <!-- About -->
+    <section id="about" class="section section__container">
+      <h1>About me</h1>
+      <p>
+        프로그래밍에 처음 발을 떼고있습니다. 알려주는 사람이 없고 독학으로
+        하여서 발걸음을 내딛는게 수월하진 않았지만 이렇게 아름다운 웹사이트를
+        만들어서 행복합니다. 반년뒤 나의 모습을 볼때 더욱 성장해있는 내가 되길
+      </p>
+      <div class="about__majors">
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h2 class="major__title">Front-end</h2>
+          <div class="major__description">
+            HTML, CSS, JavaScript, TypeScript
+            <br />React, Vue, Web APIs
+          </div>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fas fa-mobile"></i>
+          </div>
+          <h2 class="major__title">Mobile</h2>
+          <p class="major__description">
+            Android, iOS, React Native, Flutter
+            <br />Java, Swift, Kotlin
+          </p>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h2 class="major__title">Back-end</h2>
+          <p class="major__description">
+            Java, JavaScript, Go, NodeJs,
+            <br />Rest APIs, GraphGL
+          </p>
+        </div>
+      </div>
+      <div class="about__jobs">
+        <div class="job">
+          <img src="imgs/unnamed.jpg" alt="중부대학교" class="job__logo" />
+          <div class="job__description">
+            <p class="job__name">중부대학교에 정보통신학과로 재학중입니다.</p>
+            <p class="job__period">2017 Feb - Until now</p>
+          </div>
+        </div>
+        <div class="job"></div>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="section__container">
+        <h1>Skills</h1>
+        <h2>Skils & Attributes</h2>
+        <p>
+          Even though I walk through the valley of the shadow of death, I will
+          fear no evil, for you are with me; your rod and your staff, they
+          comfort me.
+        </p>
+        <div class="skillset">
+          <div class="skillset__left">
+            <h3 class="skillset__title">Skills</h3>
+            <div class="skill">
+              <div class="skill__description">
+                <span>HTML</span>
+                <span>99%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 99%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>CSS</span>
+                <span>90%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skillset__right">
+            <div class="tools">
+              <h3 class="skillset__title">Tools</h3>
+              <ul class="tools__list">
+                <li><span>Visual Studio Code</span></li>
+                <li><span>IntelliJ</span></li>
+                <li><span>Android Studio Code</span></li>
+                <li><span>iOS development tools</span></li>
+                <li><span>Sketch app</span></li>
+              </ul>
+            </div>
+            <div class="etc">
+              <h3 class="skillset__title">Etc</h3>
+              <ul class="etc__list">
+                <li><sapn>Git</sapn></li>
+                <li><sapn>Scrum Master</sapn></li>
+                <li><sapn>Math</sapn></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Work -->
+    <section id="work" class="section">
+      <div class="section__container">
+        <div class="section__container">
+          <h1>My work</h1>
+          <h3>Projects</h3>
+          <div class="work__categories">
+            <button class="category__btn active">
+              All<span class="category__count">8</span>
+            </button>
+            <button class="category__btn">
+              Front-end<span class="category__count">3</span>
+            </button>
+            <button class="category__btn">
+              Back-end<span class="category__count">3</span>
+            </button>
+            <button class="category__btn">
+              Mobile<span class="category__count">2</span>
+            </button>
+          </div>
+          <div class="work__projects">
+            <a
+              href="https://www.youtube.com/watch?v=4-K17V1Af9s"
+              class="project"
+              target="blank"
+            >
+              <img
+                class="project__img"
+                src="imgs/projects/캡처.PNG"
+                alt="Youtube"
+              />
+              <div class="project__description">
+                <h3>Youtube Site</h3>
+                <span>장신의 숏터뷰</span>
+              </div>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=TebBOBos3-s"
+              class="project"
+              target="blank"
+            >
+              <img
+                class="project__img"
+                src="imgs/projects/캡처1.PNG"
+                alt="Youtube"
+              />
+              <div class="project__description">
+                <h3>Youtube Site</h3>
+                <span>장신의 숏터뷰</span>
+              </div>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=wYLHDEatvYM"
+              class="project"
+              target="blank"
+            >
+              <img
+                class="project__img"
+                src="imgs/projects/캡처2.PNG"
+                alt="Youtube"
+              />
+              <div class="project__description">
+                <h3>Youtube Site</h3>
+                <span>장신의 숏터뷰</span>
+              </div>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=r4md8-DH8Yo"
+              class="project"
+              target="blank"
+            >
+              <img
+                class="project__img"
+                src="imgs/projects/캡처3.PNG"
+                alt="Youtube"
+              />
+              <div class="project__description">
+                <h3>Youtube Site</h3>
+                <span>장신의 숏터뷰</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section id="tetimonials" class="section">
+      <div class="section__container">
+        <h1>Testimonials</h1>
+        <h3>See what they say about me</h3>
+        <div class="testimonials">
+          <div class="testimonial">
+            <img
+              src="imgs/testimonial/KakaoTalk_20210314_210918626.jpg"
+              alt="Hyogi's Drum"
+              class="testimonial__avatar"
+            />
+            <div class="testimonial__speech-bubble">
+              <p>
+                저는 드럼을 2019년 11월부터 혼자 독학으로 배웠습니다. 현재는
+                온누리 감리교회 찬양단에서 찬양단 드러머로 섬기고있습니다.
+              </p>
+              <p class="name"><a href="">Hyogi</a> /Onnuri</p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__speech-bubble">
+              <p>
+                저는 드럼을 2019년 11월부터 혼자 독학으로 배웠습니다. 현재는
+                온누리 감리교회 찬양단에서 찬양단 드러머로 섬기고있습니다.
+              </p>
+              <p class="name"><a href="">Hyogi</a> /Onnuri</p>
+            </div>
+            <img
+              src="imgs/testimonial/KakaoTalk_20210314_210918626.jpg"
+              alt="Hyogi's Drum"
+              class="testimonial__avatar"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h1 class="contact__title">Let's talk</h1>
+      <h2 class="contact__email">since9802@naver.com</h2>
+      <div class="contact__links">
+        <a href="https://github.com/since9802/Portpolio" target="_black">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+      </div>
+      <p class="contact__rights">2021 Hyogi's coding - All rights reserved</p>
+    </section>
   </body>
 </html>
