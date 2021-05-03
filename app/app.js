@@ -9,8 +9,8 @@ dotenv.config();
 const accessLogStream = require("./src/config/log");
 // 라우팅
 const home = require("./src/routes/home");
+const { response } = require("express");
 // 앱세팅
-app.engine("html", require("ejs").renderFile);
 app.set("views", "./src/views"); //
 app.set("view engine", "ejs"); //view engine을 ejs사용
 app.use(express.static(`${__dirname}/src/public`)); //login.ejs의 경로중 js에 접근할 수 있도록 해줌
@@ -18,5 +18,4 @@ app.use(express.json());
 // URL을 통해 전달되는 데이터에 한글, 공백 등과같은 문자가 포함될 경우 제대로 인식되지 않는 문제 해결
 app.use(express.urlencoded({ extended: true }));
 app.use("/", home); //use - > 미들웨어를 등록해주는 메서드
-
 module.exports = app;
