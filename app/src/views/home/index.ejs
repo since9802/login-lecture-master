@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/home/style.css" />
-    <sript src="main.js defer"></sript>
+    <script src="/js/home/main.js" defer></script>
   </head>
   <body>
     <!--Navbar-->
@@ -28,14 +28,12 @@
         <i class="fab fa-diaspora"></i>
         <a href="#">CCIT</a>
       </div>
-      <div class="navbar__menu">
         <ul class="navbar__menu">
-          <li class="navbar__menu__item active">Home</li>
-          <li class="navbar__menu__item">About</li>
-          <li class="navbar__menu__item">Skills</li>
-          <li class="navbar__menu__item">Members</li>
-          <li class="navbar__menu__item">Testimonial</li>
-          <li class="navbar__menu__item">Review</li>
+          <li class="navbar__menu__item active" data-link="#home">Home</li>
+          <li class="navbar__menu__item" data-link="#about">About</li>
+          <li class="navbar__menu__item" data-link="#work">Members</li>
+          <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
+          <li class="navbar__menu__item" data-link="#contact">Review</li>
         </ul>
       </div>
 
@@ -46,12 +44,6 @@
     </nav>
     <!-- Home -->
     <section id="home">
-      <img
-        src="imgs/KakaoTalk_20210313_224525193.jpg"
-        alt="Hyogi's Profile photo"
-        class="home__avatar"
-      />
-
       <h1 class="home__title">
         스마트한 카페운영을 위한 당신의 선택<br />환영합니다:)
       </h1>
@@ -98,19 +90,19 @@
           </p>
         </div>
       </div>
-      <div class="about__jobs">
+      <!-- <div class="about__jobs">
         <div class="job">
           <img src="imgs/unnamed.jpg" alt="중부대학교" class="job__logo" />
           <div class="job__description">
-            <p class="job__name">중부대학교에 정보통신학과로 재학중입니다.</p>
+            <p class="job__name">.</p>
             <p class="job__period">2017 Feb - Until now</p>
           </div>
         </div>
         <div class="job"></div>
-      </div>
+      </div> -->
     </section>
     <!-- Skills -->
-    <section id="skills" class="section">
+    <!-- <section id="skills" class="section">
       <div class="section__container">
         <h1>Skills</h1>
         <h2>Skils & Attributes</h2>
@@ -163,12 +155,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Work -->
     <section id="work" class="section">
       <div class="section__container">
         <div class="section__container">
-          <h1>My work</h1>
+          <h1>How it works</h1>
           <h3>Projects</h3>
           <div class="work__categories">
             <button class="category__btn active">
@@ -250,7 +242,7 @@
       </div>
     </section>
     <!-- Testimonials -->
-    <section id="tetimonials" class="section">
+    <section id="testimonials" class="section">
       <div class="section__container">
         <h1>Testimonials</h1>
         <h3>See what they say about me</h3>
@@ -298,7 +290,7 @@
           <i class="fa fa-linkedin-square"></i>
         </a>
       </div>
-      <p class="contact__rights">2021 Hyogi's coding - All rights reserved</p>
+      <p class="contact__rights">2021 CCIT's PROJECT - All rights reserved</p>
     </section>
   </body>
 </html>
