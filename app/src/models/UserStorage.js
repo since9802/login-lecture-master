@@ -1,5 +1,4 @@
 "use strict";
-//아래 문장 uesr = require 이거 추가한적이 없는데 왜있을까..?
 
 const db = require("../config/db");
 class UserStorage {

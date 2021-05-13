@@ -98,7 +98,7 @@ p {
   z-index: 1;
 }
 #navbar.navbar--dark {
-  background-color: brown;
+  background-color: #3b0b17;
   padding: 8px;
 }
 .navbar__menu {
@@ -381,7 +381,9 @@ p {
 }
 /* Contact */
 #contact {
-  background-color: var(--color-blue);
+  background: url("/imgs/home-background3.png") center/cover no-repeat;
+  padding: 120px;
+  text-align: center;
 }
 .contact__title,
 .contact__email,
@@ -435,6 +437,7 @@ p {
     width: 100%;
     display: none;
   }
+
   .about__majors {
     flex-direction: column;
   }
