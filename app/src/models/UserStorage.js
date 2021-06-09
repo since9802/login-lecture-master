@@ -1,5 +1,6 @@
 "use strict";
 
+const crypto = require("crypto");
 const db = require("../config/db");
 class UserStorage {
   static getUserInfo(id) {
@@ -14,8 +15,12 @@ class UserStorage {
 
   static async save(userInfo) {
     return new Promise((resolve, reject) => {
+      const hashpassword = crypto
+        .createHash("sha256")
+        .update(userInfo["psword"])
+        .digest("base64");
       const query = "INSERT INTO users(id, name, psword) VALUES(?, ?, ?);";
-      db.query(query, [userInfo.id, userInfo.name, userInfo.psword], (err) => {
+      db.query(query, [userInfo.id, userInfo.name, hashpassword], (err) => {
         if (err) reject(`${err}`);
         else resolve({ success: true });
       });

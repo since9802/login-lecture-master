@@ -16,6 +16,10 @@ const output = {
     logger.info(`GET / register 200 "회원가입 화면으로 이동"`);
     res.render("home/register");
   },
+  review: (req, res) => {
+    logger.info(`GET / review 200 "회원가입 화면으로 이동"`);
+    res.render("home/review");
+  },
 };
 //login.js에서 body로 데이터를 전달하니깐 해당body를 보기위해서 req.body라고작성함
 const process = {

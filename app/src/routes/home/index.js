@@ -8,6 +8,7 @@ const ctrl = require("./home.ctrl");
 router.get("/", ctrl.output.home); //router.get("/", (req, res) => {} ->브라우저로 /경로로 요청이 들어오면(요청이 뭔지 알아야하니깐 req, res를 씀)
 router.get("/login", ctrl.output.login);
 router.get("/register", ctrl.output.register);
+router.get("/review", ctrl.output.review);
 //로그인데이터를 받아서 로그인기능을 처리함,home.ctrl에 process함수만듬
 router.post("/login", ctrl.process.login);
 router.post("/register", ctrl.process.register);
