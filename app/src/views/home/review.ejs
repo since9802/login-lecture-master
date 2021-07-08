@@ -2,11 +2,180 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Smart Cushion</title>
+    <meta
+      name="description"
+      content="Portfolio for world-renowned software engineer Hyogi"
+    />
+    <meta name="author" content="Hyogi" />
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/f7da50d553.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/home/style.css" />
+    <script src="/js/home/main.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="./TweenMax.js"></script>
+<script>
+var qnaNum = -1;
+$(document).ready(function(){
+    $('.qa_li .question').click(function(){
+        q = $(".qa_li .question").index(this);
+        if(q!=qnaNum){
+            $('.qa_li .answer').stop(true, true).slideUp(400);
+            $('.qa_li').removeClass('open');
+            TweenMax.to($('.qa_li .question').eq(qnaNum).find('.iconDiv'), 0.4, {rotation:0});
+            qnaNum = q;
+            $('.qa_li').eq(qnaNum).addClass('open');
+            $('.qa_li .answer').eq(qnaNum).stop(true, true).slideDown(400);
+            //TweenMax.to($('.qa_li .question').eq(qnaNum).find('.iconDiv'), 0.4, {rotation:180});
+            TweenMax.to($('.qa_li .question').eq(qnaNum).find('.iconDiv'), 0.4, {rotation:0});
+        }else{
+            $('.qa_li .answer').eq(qnaNum).stop(true, true).slideUp(400);
+            $('.qa_li').eq(qnaNum).removeClass('open');
+            TweenMax.to($('.qa_li').eq(qnaNum).find('.question p'), 0.4, {rotation:0});
+            qnaNum = -1;
+        }
+    });
+});    
+</script>
+<style>
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+ul, li, p { list-style:none; padding:0; margin:0; }
+.listWrap { font-family:'Noto Sans KR', sans-serif; margin-bottom:20px; }
+.listWrap .qa_li { position:relative; display:block; padding:0; border-bottom:1px solid #ededed; cursor:pointer; }
+.listWrap .qa_li:first-child { border-top:1px solid #a6a6a6; }
+.listWrap .qa_li .ca_name { margin-bottom:14px; font-weight:400; color:#999; font-size:18px; }
+.listWrap .qa_li .tit { color:#222; font-size:24px; transition:color 0.3s ease-out; }
+.listWrap .qa_li:hover .tit { color:#0a7ac8; }
+.qa_li .question { position:relative; display:block; padding:25px 100px 25px 120px; background:url('https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_q.png') 40px center no-repeat; }
+.qa_li .question .iconDiv { position:absolute; right:40px; top:50%; -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -o-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%); }
+.qa_li .answer { position:relative; display:none; padding:40px 120px; font-size:16px; color:#222; line-height:28px; background:#f6f6f6 url('https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_a.png') 40px 40px no-repeat; border-top:1px solid #e4e4e4; }
+.modA { position:absolute; right:30px; bottom:30px; color:#e82b2b; }
+</style>
   </head>
   <body>
-    <h1>review게시판</h1>
+        <!--Navbar-->
+        <nav id="navbar">
+          <div class="navbar__logo">
+            <i class="fab fa-diaspora"></i>
+            <a href="/">CCIT</a>
+          </div>
+            <ul class="navbar__menu">
+              <li class="navbar__menu__item active" data-link="#home">Home</li>
+              <li class="navbar__menu__item" data-link="#about">About</li>
+              <li class="navbar__menu__item" data-link="#work">Works</li>
+              <li class="navbar__menu__item" data-link="#testimonials">Service</li>
+              <li class="navbar__menu__item" data-link="#contact">Contact</li>
+              <li class="navbar__menu__item"><a href="/review">FAQ</a></li>
+            </ul>
+          </div>
+    
+          <!-- Toggle button -->
+          <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+            <!-- Home -->
+    <section id="home">
+      <h1 class="home__title">
+        스마트한 카페운영을 위한 당신의 선택<br />환영합니다:)
+      </h1>
+      <h3 class="home__description">made by 1 TEAM</h3>
+      <button class="home__contact">Contact Us</button>
+    </section>
+    <!-- faq
+    <section id="about" class="section section__container">
+      <ul class="listWrap">
+        <li class="qa_li">
+            <div class="question">
+                <p class="tit">질문1</p>
+                <p class="iconDiv"><img src="https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_arrow.png"></p>
+            </div>
+            <div class="answer">답변1</div>
+        </li>
+        <li class="qa_li">
+            <div class="question">
+                <p class="tit">질문2</p>
+                <p class="iconDiv"><img src="https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_arrow.png"></p>
+            </div>
+            <div class="answer">답변2</div>
+        </li>
+        <li class="qa_li">
+            <div class="question">
+                <p class="tit">질문3</p>
+                <p class="iconDiv"><img src="https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_arrow.png"></p>
+            </div>
+            <div class="answer">답변3</div>
+        </li>
+    </ul> -->
+    <!-- FAQ2 -->
+    <section id="about" class="section section__container">
+    <h1>자주 묻는 질문</h1>
+    <ul class="qna">
+      <li>
+          <input type="checkbox" id="qna-1">
+          <label for="qna-1"><h2 class="faq">Q : 무상 AS기간은 몇년인가요??</h2></label>
+          <div>
+              <p>A : 구매 후 1년까지 AS가능합니다.</p>
+          </div>
+      </li>
+      <li>
+          <input type="checkbox" id="qna-2">
+          <label for="qna-2"><h2 class="faq">Q : 충전방법과 사용시간은 어떻게 되나요?</h2></label>
+          <div>
+              <p>A1 : 베터리 내장 방석이기에 따로 충전하실 필요는 없습닌다.</p>
+              <p>A2 : 사용시간은 2년정도 이며 2년이 지난후 배터리 교체만 해주시면 됩니다.</p>
+          </div>
+      </li>
+      <li>
+          <input type="checkbox" id="qna-3">
+          <label for="qna-3"><h2 class="faq">Q : 세탁은 어떻게 해야하나요?</h2></label>
+          <div>
+              <p>A : 부직포로 부착되어있는 모듈을 떼신 후 겉감을 벗기고 따로 세척하시면 됩니다.
+                안에는 폼 형식의 방석이기 때문에 세탁기에 돌리셔도 무방합니다.
+              </p>
+          </div>
+      </li>
+      <li>
+          <input type="checkbox" id="qna-4">
+          <label for="qna-4"><h2 class="faq">Q : 크기는 어떻게 되나요?</h2></label>
+          <div>
+              <p>A : 지름기준으로 가로 세로 30x30(cm) 입니다.</p>
+          </div>
+      </li>
+      <li>
+          <input type="checkbox" id="qna-5">
+          <label for="qna-5"><h2 class="faq">Q : 색상은 총 몇가지인가요?</h2></label>
+          <div>
+              <p>A : 검정, 연초록, 브라운, 보라, 고동색으로 총 5종류입니다.</p>
+          </div>
+      </li>
+  </ul>
+      </section>
+          <!-- Contact -->
+    <section id="contact" class="section">
+      <h1 class="contact__title">Let's talk</h1>
+      <h2 class="contact__email">since9802@naver.com</h2>
+      <div class="contact__links">
+        <a href="https://github.com/since9802/Portpolio" target="_black">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+      </div>
+      <p class="contact__rights">2021 CCIT's PROJECT</p>
+    </section>
+    <!-- Arrow up -->
+    <button class = "arrow-up">
+      <i class = "fas fa-arrow-up"></i>
+    </button>
   </body>
 </html>

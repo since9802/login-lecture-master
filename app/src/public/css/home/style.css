@@ -95,7 +95,7 @@ p {
   padding: 16px;
   background-color: transparent;
   transition: all var(--animation-duration) ease-in-out;
-  z-index: 1;
+  z-index: 7;
 }
 #navbar.navbar--dark {
   background-color: #3b0b17;
@@ -114,14 +114,16 @@ p {
   cursor: pointer;
   border-radius: var(--size-border-radius);
   color: white;
+  border: 1px solid transparent;
 }
-.navbar__menu__item.active {
+/* .navbar__menu__item.active {
   border: 1px solid var(--color-white);
   border-radius: var(--size-border-radius);
-}
+} */
 .navbar__menu__item:hover {
+  border-color: var(--color-white);
   background-color: var(--color-dark-grey);
-  border-radius: var(--size-border-radius);
+  /* border-radius: var(--size-border-radius); */
 }
 .navbar__toggle-btn {
   position: absolute;
@@ -273,10 +275,15 @@ p {
   font-size: var(--font-regular);
   padding: 8px 48px;
 }
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
+}
+.category__btn.selected,
+.category__btn:hover {
+  opacity: 1;
+  top: 0;
 }
 .work__projects {
   display: flex;
@@ -345,7 +352,7 @@ p {
   background-color: var(--color-dark-white);
 }
 /* Testimonial */
-#tetimonials {
+#testimonials {
   background-color: var(--color-light-white);
 }
 
@@ -416,12 +423,77 @@ p {
   transition: all 300ms ease-in;
   border-radius: 50%;
   pointer-events: none;
+  z-index: 6;
 }
 .arrow-up.visible {
   opacity: 1;
   pointer-events: auto;
 }
+/* faq */
+.layout {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.faq:hover {
+  color: cornflowerblue;
+}
+.qna {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.qna > li {
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.qna > li:nth-child(n + 2) {
+  /* 아이템 구분 점선 */
+  border-top: 1px dashed #aaa;
+}
+.qna input {
+  display: none;
+}
 
+.qna label {
+  /* 제목 - 클릭 영역 */
+  font-weight: bold;
+  color: #000;
+  margin: 20px 0 0;
+  cursor: pointer;
+}
+.qna label::before {
+  /* 제목 앞 화살표 */
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-left: 8px solid #a00;
+  margin: 2px 0 0 8px;
+  float: left;
+}
+.qna input:checked + label::before {
+  /* 내용 펼침 상태 제목 앞 화살표 */
+  border: 8px solid transparent;
+  border-top: 8px solid #a00;
+  border-bottom: 0;
+  margin: 8px 4px 0;
+}
+
+.qna div {
+  /* 내용 영역 - 기본 감춤 상태 */
+  display: none;
+  color: #666;
+  font-size: 0.9375em;
+  overflow: hidden;
+  padding: 10px 0 10px 30px;
+  box-sizing: border-box;
+  transition: max-height 0.4s;
+}
+.qna input:checked + label + div {
+  /* 내용 영역 펼침 */
+  display: block;
+}
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {

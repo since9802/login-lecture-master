@@ -17,7 +17,7 @@ const output = {
     res.render("home/register");
   },
   review: (req, res) => {
-    logger.info(`GET / review 200 "회원가입 화면으로 이동"`);
+    logger.info(`GET / review 200 "review 게시판으로 이동"`);
     res.render("home/review");
   },
 };
